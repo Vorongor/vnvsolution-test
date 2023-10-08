@@ -208,7 +208,7 @@
 .wayBtn {
   width: 100%;
   height: 100%;
-  border: 1px solid whitesmoke;
+  border:none;
   background-color: transparent;
   color: whitesmoke;
 }

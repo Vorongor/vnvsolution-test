@@ -3,14 +3,114 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   box-sizing: border-box;
   padding: 20px;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   background-image: linear-gradient(180deg, #323232ab, #323232);
   position: relative;
   color: whitesmoke;
   padding-top: 40px;
   overflow-x: hidden;
+}
+.title {
+  position: relative;
+  width: 30px;
+  height: 10vw;
+  overflow: hidden;
+}
+.title::before {
+  content: '';
+  height: 100%;
+  width: 15px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.title::after {
+  content: '';
+  height: 100%;
+  width: 15px;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.title.visible {
+  animation: apear 2s forwards;
+}
+@keyframes apear {
+  to {
+    width: 90vw;
+  }
+}
+.title.visible::before,
+.title.visible::after {
+  animation: underLine 2s forwards 2s;
+}
+@keyframes underLine {
+  to {
+    bottom: 0;
+    height: 50%;
+    width: 60%;
+  }
+}
+.font {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  text-align: center;
+  z-index: 2;
+  font-family: Montserrat;
+  font-size: 5vw;
+  text-shadow: 20px 15px 8px #979595;
+}
+.tab {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 0;
+  width: 90vw;
+  border-bottom: 20px solid black;
+}
+.tab.visible {
+  animation: showLink 2s forwards 4s;
+}
+@keyframes showLink {
+  to {
+    height: 20vw;
+    padding: 20px;
+  }
+}
+.link {
+  width: 95%;
+  height: 95%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.7vw;
+  font-family: 'Montserrat';
+
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+.link:hover,
+.link:focus {
+  color: #00ffff66;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.icon {
+  color: inherit;
 }
