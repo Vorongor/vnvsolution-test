@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/vnvsolution-test/static/css/main.289afff5.css",
+    "main.js": "/vnvsolution-test/static/js/main.3ef0f8b7.js",
+    "static/media/soft.jpg": "/vnvsolution-test/static/media/soft.26bc0a8e3860f0a460d1.jpg",
+    "static/media/support.jpg": "/vnvsolution-test/static/media/support.d93d422c3d4d33760589.jpg",
+    "static/media/sproj.jpg": "/vnvsolution-test/static/media/sproj.4d249a242bdf99fcacbb.jpg",
+    "static/media/thproj.jpg": "/vnvsolution-test/static/media/thproj.e55f0cb8c6407cfc3860.jpg",
+    "static/media/store.jpg": "/vnvsolution-test/static/media/store.3b72e76e0c554fe1a804.jpg",
+    "static/media/vnv.png": "/vnvsolution-test/static/media/vnv.6328696c9eac305aeaef.png",
+    "static/media/epr.jpg": "/vnvsolution-test/static/media/epr.f8f14436e84ac1526777.jpg",
+    "static/media/bot.jpg": "/vnvsolution-test/static/media/bot.e07aa3336c9090de529c.jpg",
+    "static/media/webTrans.jpg": "/vnvsolution-test/static/media/webTrans.ff8ff47bb5d328212cf9.jpg",
+    "static/media/fproj.jpg": "/vnvsolution-test/static/media/fproj.78faf0df2e60f9aacf4e.jpg",
+    "index.html": "/vnvsolution-test/index.html",
+    "main.289afff5.css.map": "/vnvsolution-test/static/css/main.289afff5.css.map",
+    "main.3ef0f8b7.js.map": "/vnvsolution-test/static/js/main.3ef0f8b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.289afff5.css",
+    "static/js/main.3ef0f8b7.js"
+  ]
+}
