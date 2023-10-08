@@ -27,7 +27,7 @@ function Adventages() {
       document.removeEventListener('mousemove', handleDragMove);
       document.removeEventListener('mouseup', handleDragEnd);
     };
-  }, [dragging]);
+  }, [dragging, handleDragMove]);
 
   const handleDragStart = e => {
     setDragging(true);
@@ -56,7 +56,6 @@ function Adventages() {
     const nextIndex = currentBlock + 1;
     if (nextIndex < sliderList.length) {
       setCurrentBlock(nextIndex);
-      setSlideClass('nextSlide');
     }
   };
 
@@ -64,7 +63,6 @@ function Adventages() {
     const previousIndex = currentBlock - 1;
     if (previousIndex >= 0) {
       setCurrentBlock(previousIndex);
-      setSlideClass('prevSlide');
     }
   };
 
