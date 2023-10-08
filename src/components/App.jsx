@@ -5,6 +5,8 @@ import Adventages from './Adventages/Adventages';
 import Servises from './Servises/Servises';
 import Projects from './Projects/Projects';
 import Contacts from './Contacts/Contacts';
+import Media from './Media/Media';
+import BrifFaq from './BrifFaq/BrifFaq';
 
 export function App() {
   return (
@@ -14,6 +16,8 @@ export function App() {
       <Servises />
       <Projects />
       <Contacts />
+      <BrifFaq />
+      <Media />
     </div>
   );
 }

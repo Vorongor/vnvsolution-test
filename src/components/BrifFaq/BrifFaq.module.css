@@ -1,0 +1,270 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(180deg, #323232, #323232ab);
+  position: relative;
+  color: whitesmoke;
+  overflow-x: hidden;
+  min-width: 0;
+  padding-top: 40px;
+}
+.title {
+  display: block;
+  position: relative;
+  width: 90vw;
+  height: 10vw;
+  z-index: 2;
+  overflow: hidden;
+}
+.brifTitle {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-size: 5vw;
+}
+.faqTitle {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  font-size: 5vw;
+}
+.brifTitle.visible,
+.faqTitle.visible {
+  transform: translateY(70%);
+  animation: upMove 1.5s forwards;
+  text-shadow: 20px 15px 8px #979595;
+}
+@keyframes upMove {
+  to {
+    transform: translateY(-40%);
+  }
+}
+.title::before {
+  content: '';
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  top: 65%;
+  right: 7%;
+  z-index: -1;
+  background-color: #000;
+}
+
+.title::after {
+  content: '';
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  top: 65%;
+  left: 7%;
+  z-index: -1;
+  background-color: #000;
+}
+.title.visible::before,
+.title.visible::after {
+  transform: translateY(-300%);
+  animation: downMove 1.5s forwards;
+}
+@keyframes downMove {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 90vw;
+  height: 50vw;
+  background-color: transparent;
+}
+
+.brif,
+.faq {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: 2px solid whitesmoke;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(315deg, #202020, transparent);
+  box-shadow: 17px 20px 23px 8px rgba(245, 245, 245, 1);
+  box-shadow: 10px 8px 5px 0px #f5f5f550;
+}
+.brif {
+  background-image: linear-gradient(45deg, #202020, transparent);
+  box-shadow: -10px 8px 5px 0px #f5f5f550;
+}
+.box {
+  flex: 1;
+  width: 95%;
+  background-color: transparent;
+  color: whitesmoke;
+  display: flex;
+  padding: 5px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid whitesmoke;
+  border-radius: 20px;
+  transition: flex 350ms ease-in-out; /* Плавна зміна висоти */
+}
+.box.large {
+  flex: 4;
+}
+
+.questionBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Montserrat;
+  padding: 5px;
+  font-size: 1.4vw;
+  font-weight: bold;
+  text-shadow: 20px 15px 4px #727272ab;
+}
+.question {
+  width: 90%;
+}
+.showHide {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: rotate(-90deg);
+  transition: transform 300ms ease-in-out;
+}
+.large .showHide {
+  transform: rotate(90deg);
+}
+.answer {
+  height: 0;
+  padding: 20px;
+  font-size: 1.5vw;
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Montserrat';
+  animation: showText 0.25s forwards;
+}
+@keyframes showText {
+  to {
+    height: 90%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.submit,
+.textarea,
+.input,
+.upload {
+  width: 80%;
+  height: 10%;
+  border: 1px solid whitesmoke;
+  border-radius: 40px;
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 8px 12px;
+  font-family: Montserrat;
+  font-size: 1.5vw;
+}
+.textarea {
+  height: 40%;
+  border-radius: 20px;
+  resize: none;
+}
+.upload {
+  position: relative;
+  padding: 12px;
+}
+.input {
+  width: 100%;
+  height: 100%;
+}
+.upload:hover,
+.upload:focus,
+.input:focus,
+.input:hover,
+.submit:hover,
+.submit:focus,
+.textarea:hover,
+.textarea:focus {
+  background-color: #00ffff66;
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+.icon {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+  scale: 2;
+  animation: blink 12s linear infinite;
+}
+.changedIcon {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+  scale: 2;
+  color: whitesmoke;
+  animation: change 5s infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes blink {
+  20%,
+  60%,
+  100% {
+    color: inherit;
+  }
+  40%,
+  80% {
+    color: transparent;
+  }
+}
+
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
