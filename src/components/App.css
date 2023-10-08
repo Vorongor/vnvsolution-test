@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+div {
+  scroll-snap-align: start;
+}
+/* ========================normalize========================== */
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.links {
+  text-decoration: none;
+  font-style: normal;
+}
+.list {
+  list-style-type: none;
+}
+img {
+  display: block;
+}

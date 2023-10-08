@@ -1,0 +1,166 @@
+import React, { useState } from "react";
+import VisibilitySensor from "react-visibility-sensor";
+import style from "./Adventages.module.css";
+
+import softIMG from "../../img/soft.jpg";
+import eprIMG from "../../img/epr.jpg";
+import storeIMG from "../../img/store.jpg";
+import supportIMG from "../../img/support.jpg";
+import botIMG from "../../img/bot.jpg";
+import webTransIMG from "../../img/webTrans.jpg";
+
+function Adventages() {
+  const [currentBlock, setCurrentBlock] = useState(1);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleBlockClick = (index) => {
+    setCurrentBlock(index);
+  };
+
+  const sliderList = [
+    {
+      key: "soft",
+      arr: [
+        {
+          tip: "Quality",
+          text: "Our team always prioritizes quality. We develop software that meets the highest quality standards.",
+        },
+        {
+          tip: "Speed",
+          text: "We develop software quickly and efficiently, so your business can start using it as soon as possible.",
+        },
+        {
+          tip: "Promising",
+          text: "Our solutions are developed with an eye toward future prospects, allowing your business to grow and evolve.",
+        },
+      ],
+      img: softIMG,
+    },
+    {
+      key: "epr",
+      arr: [
+        {
+          tip: "Everyone Matters",
+          text: "We challenge the 'everyone matters' philosophy and provide you with a unique ERP system that supports all aspects of your business.",
+        },
+        {
+          tip: "Leadership is Here To Serve",
+          text: "Our team of leaders is always ready to serve your needs and provide reliable support.",
+        },
+        {
+          tip: "Resilient",
+          text: "Our ERP system is resilient and ready to withstand any business challenges.",
+        },
+      ],
+      img: eprIMG,
+    },
+    {
+      key: "store",
+      arr: [
+        {
+          tip: "Continuous Improvements",
+          text: "We develop online stores taking into account the constant changes in the market and technologies.",
+        },
+        {
+          tip: "Quality",
+          text: "Our online stores are known for their high quality and reliability.",
+        },
+        {
+          tip: "Efficiency",
+          text: "We create efficient online stores that ensure your success in the virtual space.",
+        },
+      ],
+      img: storeIMG,
+    },
+    {
+      key: "sup",
+      arr: [
+        {
+          tip: "Communication",
+          text: "We provide excellent communication with our clients and are always ready to listen to your needs.",
+        },
+        {
+          tip: "Improvement",
+          text: "Our team constantly works on improving your software to keep it up-to-date and efficient.",
+        },
+        {
+          tip: "Expertise",
+          text: "We have high expertise in software support and updates.",
+        },
+      ],
+      img: supportIMG,
+    },
+    {
+      key: "bot",
+      arr: [
+        {
+          tip: "Automation",
+          text: "We create innovative bots that automate many processes in your business.",
+        },
+        {
+          tip: "Innovation",
+          text: "Our solutions are characterized by innovative technologies and approaches.",
+        },
+        {
+          tip: "Quality",
+          text: "Our bots are reliable and ready to help you implement automation.",
+        },
+      ],
+      img: botIMG,
+    },
+
+    {
+      key: "web",
+      arr: [
+        {
+          tip: "Skills",
+          text: "Our team has high qualifications in website transferring, ensuring a seamless process.",
+        },
+        {
+          tip: "Experience",
+          text: "We have years of experience in transferring websites of any complexity.",
+        },
+        {
+          tip: "Result",
+          text: "We guarantee a quality result and reliability during the website transfer process.",
+        },
+      ],
+      img: webTransIMG,
+    },
+  ];
+  const handleVisibilityChange = (visible) => {
+    setIsVisible(visible);
+  };
+
+  const blockElements = sliderList.map((slider, index) => {
+    const isCurrent = currentBlock === index;
+    return (
+      <div
+        key={slider.key}
+        className={`${style.else} ${isCurrent ? style.current : ""}`}
+        style={{
+          backgroundImage: `linear-gradient(rgba(50, 50, 50, 0.6), rgba(50, 50, 50, 0.6)), url(${slider.img})`,
+        }}
+        onClick={() => handleBlockClick(index)}
+      >
+        {slider.arr.map((item) => (
+          <div key={item.tip} className={style.block}>
+            <h5 className={style.tip}>{item.tip}</h5>
+            {isCurrent && <p className={style.text}>{item.text}</p>}
+          </div>
+        ))}
+      </div>
+    );
+  });
+
+  return (
+    <section className={style.container}>
+      <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
+      <h3 className={`${style.title} ${isVisible ? style.visible : ""}`}>Why Us?</h3>
+      </VisibilitySensor>
+      <div className={style.tab}>{blockElements}</div>
+    </section>
+  );
+}
+
+export default Adventages;

@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(180deg, #323232, #323232ab);
+  position: relative;
+  color: whitesmoke;
+  overflow-x: hidden;
+  min-width: 0;
+  padding-top: 40px;
+}
+.title {
+  position: relative;
+  z-index: 2;
+  font-family: Montserrat;
+  font-size: 5vw;
+  text-shadow: 20px 15px 8px #979595;
+}
+.title.visible::before {
+  content: "";
+  display: block;
+  background-color: #000;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: vertical 1.5s forwards;
+}
+.title.visible::after {
+  content: "";
+  display: block;
+  background-color: #000;
+  position: absolute;
+  z-index: -1;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: horizontal 2s forwards;
+}
+@keyframes vertical {
+  1% {
+    width: 5px;
+    height: 5px;
+  }
+  30% {
+    height: 130%;
+    width: 5px;
+  }
+  100% {
+    height: 130%;
+    width: 110%;
+  }
+}
+@keyframes horizontal {
+  1% {
+    width: 5px;
+    height: 5px;
+  }
+  30% {
+    height: 5px;
+    width: 130%;
+  }
+  100% {
+    height: 75%;
+    width: 130%;
+  }
+}
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 80%;
+  max-width: 1200px;
+}
+.else {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 18%;
+  height: 15%;
+  border: 1px solid black;
+  color: whitesmoke;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0.9vw;
+}
+.current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  order: -1;
+  width: 100%;
+  height: 83%;
+  border: 1px solid black;
+  color: whitesmoke;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 2vw;
+  font-family: "Montserrat";
+}
+.block {
+  font-size: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.tip {
+  font-size: inherit;
+}
+.text {
+  font-size: 1.4vw;
+  text-align: center;
+}

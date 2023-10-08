@@ -1,16 +1,19 @@
-export const App = () => {
+import React from 'react';
+import './App.css';
+import Hero from './Hero/Hero';
+import Adventages from './Adventages/Adventages';
+import Servises from './Servises/Servises';
+import Projects from './Projects/Projects';
+import Contacts from './Contacts/Contacts';
+
+export function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="App">
+      <Hero />
+      <Adventages />
+      <Servises />
+      <Projects />
+      <Contacts />
     </div>
   );
-};
+}

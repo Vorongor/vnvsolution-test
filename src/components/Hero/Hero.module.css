@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 126px;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(180deg, #000000, #323232);
+  position: relative;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 75px;
+  top: 10px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Montserrat;
+  font-size: 8vw;
+}
+.title.visible span:nth-child(1) {
+  display: flex;
+  transform: translateX(100%);
+  opacity: 0;
+  margin: 0;
+  justify-content: flex-start;
+  animation: slideFromRight 2s ease forwards;
+}
+.title.visible span:nth-child(2) {
+  display: flex;
+  transform: translateX(-100%);
+  opacity: 0;
+  margin: 0;
+  justify-content: flex-end;
+  animation: slideFromLeft 2s ease forwards;
+}
+.title.visible span:nth-child(3) {
+  display: flex;
+  transform: translateX(100%);
+  opacity: 0;
+  margin: 0;
+  justify-content: flex-start;
+  animation: slideFromRight 2s ease forwards;
+}
+@keyframes slideFromRight {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.text {
+  font-family: Montserrat;
+  position: relative;
+  font-size: 2vw;
+  text-align: right;
+  font-weight: bold;
+}
+.text::before {
+  content: "";
+  width: 83%;
+  height: 2px;
+  background-color: whitesmoke;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+.btn {
+  list-style: none;
+  text-decoration: none;
+  font-family: Montserrat;
+  align-self: center;
+  min-width: 150px;
+  height: 72px;
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 4vw;
+}
