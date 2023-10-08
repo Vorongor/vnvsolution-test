@@ -27,7 +27,7 @@ function Adventages() {
       document.removeEventListener('mousemove', handleDragMove);
       document.removeEventListener('mouseup', handleDragEnd);
     };
-  }, [dragging, handleDragMove]);
+  }, [dragging]);
 
   const handleDragStart = e => {
     setDragging(true);
