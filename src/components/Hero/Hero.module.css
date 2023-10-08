@@ -70,7 +70,7 @@
   font-weight: bold;
 }
 .text::before {
-  content: "";
+  content: '';
   width: 83%;
   height: 2px;
   background-color: whitesmoke;
@@ -89,4 +89,8 @@
   background-color: transparent;
   color: whitesmoke;
   font-size: 4vw;
+}
+.btn:hover,
+.btn:focus {
+  color: #00ffff66;
 }
