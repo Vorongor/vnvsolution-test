@@ -14,7 +14,6 @@ function Adventages() {
   const [isVisible, setIsVisible] = useState(false);
   const [dragging, setDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(null);
-  const [slideClass, setSlideClass] = useState('');
   const MIN_DRAG_DISTANCE = 400;
   useEffect(() => {
     const tabElement = document.querySelector(`.${style.tab}`);
