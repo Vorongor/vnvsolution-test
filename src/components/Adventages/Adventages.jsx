@@ -50,7 +50,7 @@ function Adventages() {
       document.removeEventListener('mousemove', handleDragMove);
       document.removeEventListener('mouseup', handleDragEnd);
     };
-  }, [dragging, handleDragStart, handleDragMove, handleDragEnd]);
+  });
 
   const handleNextSlide = () => {
     const nextIndex = currentBlock + 1;
