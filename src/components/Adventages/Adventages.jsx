@@ -15,19 +15,6 @@ function Adventages() {
   const [dragging, setDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(null);
   const MIN_DRAG_DISTANCE = 400;
-  useEffect(() => {
-    const tabElement = document.querySelector(`.${style.tab}`);
-
-    tabElement.addEventListener('mousedown', handleDragStart);
-    document.addEventListener('mousemove', handleDragMove);
-    document.addEventListener('mouseup', handleDragEnd);
-
-    return () => {
-      tabElement.removeEventListener('mousedown', handleDragStart);
-      document.removeEventListener('mousemove', handleDragMove);
-      document.removeEventListener('mouseup', handleDragEnd);
-    };
-  }, [dragging]);
 
   const handleDragStart = e => {
     setDragging(true);
@@ -51,6 +38,19 @@ function Adventages() {
       }
     }
   };
+  useEffect(() => {
+    const tabElement = document.querySelector(`.${style.tab}`);
+
+    tabElement.addEventListener('mousedown', handleDragStart);
+    document.addEventListener('mousemove', handleDragMove);
+    document.addEventListener('mouseup', handleDragEnd);
+
+    return () => {
+      tabElement.removeEventListener('mousedown', handleDragStart);
+      document.removeEventListener('mousemove', handleDragMove);
+      document.removeEventListener('mouseup', handleDragEnd);
+    };
+  }, [dragging, handleDragStart, handleDragMove, handleDragEnd]);
 
   const handleNextSlide = () => {
     const nextIndex = currentBlock + 1;
