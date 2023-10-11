@@ -3,17 +3,11 @@ import VisibilitySensor from 'react-visibility-sensor';
 import style from './Adventages.module.css';
 
 import softIMG from '../../img/soft.jpg';
-import IconPersonWorkspace from '../../img/svg/WorkSvg';
 import eprIMG from '../../img/epr.jpg';
-import IconUserGroup from '../../img/svg/GroupSvg';
 import storeIMG from '../../img/store.jpg';
-import IconAppstore from '../../img/svg/StoreSvg';
 import supportIMG from '../../img/support.jpg';
-import IconBxSupport from '../../img/svg/SupportSvg';
 import botIMG from '../../img/bot.jpg';
-import IconRobotHappyOutline from '../../img/svg/Bot2Svg';
 import webTransIMG from '../../img/webTrans.jpg';
-import IconSpiderWeb from '../../img/svg/SpiderWebSvg';
 
 function Adventages() {
   const [currentBlock, setCurrentBlock] = useState(1);
