@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -6,6 +6,9 @@ html {
 }
 div {
   scroll-snap-align: start;
+}
+body.modal-open {
+  overflow: hidden;
 }
 /* ========================normalize========================== */
 * {

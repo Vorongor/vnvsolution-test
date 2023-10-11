@@ -3,11 +3,17 @@ import VisibilitySensor from 'react-visibility-sensor';
 import style from './Adventages.module.css';
 
 import softIMG from '../../img/soft.jpg';
+import IconPersonWorkspace from '../../img/svg/WorkSvg';
 import eprIMG from '../../img/epr.jpg';
+import IconUserGroup from '../../img/svg/GroupSvg';
 import storeIMG from '../../img/store.jpg';
+import IconAppstore from '../../img/svg/StoreSvg';
 import supportIMG from '../../img/support.jpg';
+import IconBxSupport from '../../img/svg/SupportSvg';
 import botIMG from '../../img/bot.jpg';
+import IconRobotHappyOutline from '../../img/svg/Bot2Svg';
 import webTransIMG from '../../img/webTrans.jpg';
+import IconSpiderWeb from '../../img/svg/SpiderWebSvg';
 
 function Adventages() {
   const [currentBlock, setCurrentBlock] = useState(1);
@@ -88,6 +94,7 @@ function Adventages() {
         },
       ],
       img: softIMG,
+      icon: IconPersonWorkspace,
     },
     {
       key: 'epr',
@@ -106,6 +113,7 @@ function Adventages() {
         },
       ],
       img: eprIMG,
+      icon: IconUserGroup,
     },
     {
       key: 'store',
@@ -124,6 +132,7 @@ function Adventages() {
         },
       ],
       img: storeIMG,
+      icon: IconAppstore,
     },
     {
       key: 'sup',
@@ -142,6 +151,7 @@ function Adventages() {
         },
       ],
       img: supportIMG,
+      icon: IconBxSupport,
     },
     {
       key: 'bot',
@@ -160,6 +170,7 @@ function Adventages() {
         },
       ],
       img: botIMG,
+      icon: IconRobotHappyOutline,
     },
 
     {
@@ -179,6 +190,7 @@ function Adventages() {
         },
       ],
       img: webTransIMG,
+      icon: IconSpiderWeb,
     },
   ];
   const handleVisibilityChange = visible => {
@@ -186,6 +198,7 @@ function Adventages() {
   };
 
   const blockElements = sliderList.map((slider, index) => {
+    const IconComponent = slider.icon;
     const isCurrent = currentBlock === index;
     return (
       <div
@@ -202,6 +215,11 @@ function Adventages() {
             {isCurrent && <p className={style.text}>{item.text}</p>}
           </div>
         ))}
+        {isCurrent && (
+           <a href="#contacts" className={`${style.btn} ${style.btnAnimated} ${style.btnWhite}`}>
+           <p className={style.icon}>Order Now!</p>
+         </a>
+        )}
       </div>
     );
   });

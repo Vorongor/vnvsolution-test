@@ -230,7 +230,7 @@
   position: absolute;
   right: 4%;
   top: 50%;
-  scale: 2;
+  scale: 1.5;
   transform: translate(-50%, -30%);
   animation: blink 12s linear infinite;
 }

@@ -124,7 +124,7 @@
 }
 .text {
   padding-left: 45px;
-  font-size: 12px;
+  font-size: 11px;
   color: #000;
 }
 .svg {
@@ -151,6 +151,7 @@
   width: 50vh;
   height: auto;
   opacity: 0;
+  gap: 10px;
   padding: 12px;
   animation: fromInside 2s ease forwards;
 }
@@ -206,7 +207,7 @@
   background-color: #000;
 }
 .com {
-padding-top: 12px;
+  padding-top: 12px;
   color: #979595;
   font-family: 'Monserat';
   font-size: 3vw;
@@ -218,6 +219,8 @@ padding-top: 12px;
 }
 
 .button {
+  text-decoration: none;
+  color: #000;
   font-size: 1.8vw;
   border: 2px solid #000;
   padding: 8px 16px;
@@ -225,7 +228,39 @@ padding-top: 12px;
   text-shadow: 6px 4px 4px #202020;
   border-radius: 20px;
   transform: scale(1);
+  position: relative;
+  overflow: hidden;
 }
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -25%;
+  width: 0;
+  height: 120%;
+  background-color: #277e7e7c;
+  border-radius: 50%;
+  transition: width 0.5s ease-in-out;
+}
+
+.button::before {
+  left: 0;
+}
+
+.button::after {
+  right: 0;
+}
+
+.button:hover::before {
+  width: 120%;
+}
+
+.button:hover::after {
+  width: 120%;
+}
+
 .button:hover,
 .button:focus {
   transform: scale(1.2);
@@ -245,7 +280,7 @@ padding-top: 12px;
     border-radius: 20px;
     background-color: whitesmoke;
     width: 85vw;
-    height: 50vw;
+
     color: #000;
   }
   .tabMenu {
@@ -305,6 +340,7 @@ padding-top: 12px;
   }
   .screen {
     flex-direction: row;
+    height: 100%;
   }
   .tumb.visibleBlock {
     width: 65vh;
@@ -315,5 +351,7 @@ padding-top: 12px;
   .tip {
     font-size: 1.4vw;
   }
-  .com {  font-size: 1vw;}
+  .com {
+    font-size: 1vw;
+  }
 }
