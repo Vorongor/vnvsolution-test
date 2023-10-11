@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vnvsolution-test/static/css/main.94d534d9.css",
-    "main.js": "/vnvsolution-test/static/js/main.652f33ee.js",
+    "main.css": "/vnvsolution-test/static/css/main.b860e322.css",
+    "main.js": "/vnvsolution-test/static/js/main.155b5963.js",
     "static/media/soft.jpg": "/vnvsolution-test/static/media/soft.26bc0a8e3860f0a460d1.jpg",
     "static/media/support.jpg": "/vnvsolution-test/static/media/support.d93d422c3d4d33760589.jpg",
     "static/media/sproj.jpg": "/vnvsolution-test/static/media/sproj.4d249a242bdf99fcacbb.jpg",
@@ -13,11 +13,11 @@
     "static/media/webTrans.jpg": "/vnvsolution-test/static/media/webTrans.ff8ff47bb5d328212cf9.jpg",
     "static/media/fproj.jpg": "/vnvsolution-test/static/media/fproj.78faf0df2e60f9aacf4e.jpg",
     "index.html": "/vnvsolution-test/index.html",
-    "main.94d534d9.css.map": "/vnvsolution-test/static/css/main.94d534d9.css.map",
-    "main.652f33ee.js.map": "/vnvsolution-test/static/js/main.652f33ee.js.map"
+    "main.b860e322.css.map": "/vnvsolution-test/static/css/main.b860e322.css.map",
+    "main.155b5963.js.map": "/vnvsolution-test/static/js/main.155b5963.js.map"
   },
   "entrypoints": [
-    "static/css/main.94d534d9.css",
-    "static/js/main.652f33ee.js"
+    "static/css/main.b860e322.css",
+    "static/js/main.155b5963.js"
   ]
 }
