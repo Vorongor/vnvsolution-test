@@ -94,7 +94,6 @@ function Adventages() {
         },
       ],
       img: softIMG,
-      icon: IconPersonWorkspace,
     },
     {
       key: 'epr',
@@ -113,7 +112,6 @@ function Adventages() {
         },
       ],
       img: eprIMG,
-      icon: IconUserGroup,
     },
     {
       key: 'store',
@@ -132,7 +130,6 @@ function Adventages() {
         },
       ],
       img: storeIMG,
-      icon: IconAppstore,
     },
     {
       key: 'sup',
@@ -151,7 +148,6 @@ function Adventages() {
         },
       ],
       img: supportIMG,
-      icon: IconBxSupport,
     },
     {
       key: 'bot',
@@ -170,7 +166,6 @@ function Adventages() {
         },
       ],
       img: botIMG,
-      icon: IconRobotHappyOutline,
     },
 
     {
@@ -190,7 +185,6 @@ function Adventages() {
         },
       ],
       img: webTransIMG,
-      icon: IconSpiderWeb,
     },
   ];
   const handleVisibilityChange = visible => {
@@ -198,7 +192,6 @@ function Adventages() {
   };
 
   const blockElements = sliderList.map((slider, index) => {
-    const IconComponent = slider.icon;
     const isCurrent = currentBlock === index;
     return (
       <div
@@ -216,9 +209,12 @@ function Adventages() {
           </div>
         ))}
         {isCurrent && (
-           <a href="#contacts" className={`${style.btn} ${style.btnAnimated} ${style.btnWhite}`}>
-           <p className={style.icon}>Order Now!</p>
-         </a>
+          <a
+            href="#contacts"
+            className={`${style.btn} ${style.btnAnimated} ${style.btnWhite}`}
+          >
+            <p className={style.icon}>Order Now!</p>
+          </a>
         )}
       </div>
     );
