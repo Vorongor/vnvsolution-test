@@ -7,7 +7,7 @@
   box-sizing: border-box;
   padding: 20px;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-image: linear-gradient(180deg, #323232, #323232ab);
   position: relative;
   color: whitesmoke;
@@ -19,21 +19,21 @@
   display: block;
   position: relative;
   width: 90vw;
-  height: 10vw;
+  height: 25vw;
   z-index: 2;
   overflow: hidden;
 }
 .brifTitle {
   position: absolute;
   top: 50%;
-  left: 10%;
-  font-size: 5vw;
+  left: 0;
+  font-size: 10vw;
 }
 .faqTitle {
   position: absolute;
   top: 50%;
-  right: 20%;
-  font-size: 5vw;
+  right: 10%;
+  font-size: 10vw;
 }
 .brifTitle.visible,
 .faqTitle.visible {
@@ -48,8 +48,8 @@
 }
 .title::before {
   content: '';
-  width: 35%;
-  height: 35%;
+  width: 65%;
+  height: 65%;
   position: absolute;
   top: 65%;
   right: 7%;
@@ -59,8 +59,8 @@
 
 .title::after {
   content: '';
-  width: 35%;
-  height: 35%;
+  width: 65%;
+  height: 65%;
   position: absolute;
   top: 65%;
   left: 7%;
@@ -84,7 +84,8 @@
   align-items: center;
   gap: 20px;
   width: 90vw;
-  height: 50vw;
+  height: auto;
+  flex-direction: column;
   background-color: transparent;
 }
 
@@ -137,7 +138,7 @@
   align-items: center;
   font-family: Montserrat;
   padding: 5px;
-  font-size: 1.4vw;
+  font-size: 2.6vw;
   font-weight: bold;
   text-shadow: 20px 15px 4px #727272ab;
 }
@@ -157,14 +158,15 @@
   background-color: transparent;
   transform: rotate(-90deg);
   transition: transform 300ms ease-in-out;
+  scale: 0.7;
 }
 .large .showHide {
   transform: rotate(90deg);
 }
 .answer {
   height: 0;
-  padding: 20px;
-  font-size: 1.5vw;
+  padding-top: 8px;
+  font-size: 2.5vw;
   line-height: 1.2;
   text-align: center;
   font-family: 'Montserrat';
@@ -183,6 +185,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  gap: 10px;
 }
 .submit,
 .textarea,
@@ -196,7 +199,7 @@
   color: whitesmoke;
   padding: 8px 12px;
   font-family: Montserrat;
-  font-size: 1.5vw;
+  font-size: 3vw;
 }
 .textarea {
   height: 40%;
@@ -227,16 +230,16 @@
   position: absolute;
   right: 4%;
   top: 50%;
-  transform: translate(-50%, -30%);
   scale: 2;
+  transform: translate(-50%, -30%);
   animation: blink 12s linear infinite;
 }
 .changedIcon {
   position: absolute;
-  right: 5%;
-  top: 50%;
+  right: 0%;
+  top: 39%;
+  scale: 1;
   transform: translate(-50%, -20%);
-  scale: 2;
   color: whitesmoke;
   animation: change 5s infinite;
   animation-delay: 0.2s;
@@ -266,5 +269,101 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    height: 100vh;
+  }
+  .title {
+    height: 10vw;
+  }
+  .brifTitle,
+  .faqTitle {
+    font-size: 5vw;
+  }
+  .tab {
+    height: 50vw;
+    flex-direction: row;
+  }
+  .changedIcon {
+    right: 4%;
+    top: 50%;
+    scale: 2;
+  }
+  .submit,
+  .textarea,
+  .input,
+  .upload {
+    font-size: 1.5vw;
+  }
+  .showHide {
+    scale: 1;
+  }
+  .questionBox,
+  .answer {
+    font-size: 1.5vw;
+  }
+  .title {
+    display: block;
+    position: relative;
+    width: 90vw;
+    height: 10vw;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .brifTitle {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 5vw;
+  }
+  .faqTitle {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    font-size: 5vw;
+  }
+  .brifTitle.visible,
+  .faqTitle.visible {
+    transform: translateY(70%);
+    animation: upMove 1.5s forwards;
+    text-shadow: 20px 15px 8px #979595;
+  }
+  @keyframes upMove {
+    to {
+      transform: translateY(-40%);
+    }
+  }
+  .title::before {
+    content: '';
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 65%;
+    right: 7%;
+    z-index: -1;
+    background-color: #000;
+  }
+
+  .title::after {
+    content: '';
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 65%;
+    left: 7%;
+    z-index: -1;
+    background-color: #000;
+  }
+  .title.visible::before,
+  .title.visible::after {
+    transform: translateY(-300%);
+    animation: downMove 1.5s forwards;
+  }
+  @keyframes downMove {
+    to {
+      transform: translateY(0);
+    }
   }
 }

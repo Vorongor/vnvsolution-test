@@ -52,10 +52,10 @@ function Contacts() {
       </VisibilitySensor>
       <div className={style.box}>
         <div className={style.socialMedia}>
+          <h4 className={style.mediaTitle}>
+            Social Media <span className={style.drop}>choose one</span>
+          </h4>
           <ul className={style.list}>
-            <h4 className={style.mediaTitle}>
-              Social Media <span className={style.drop}>choose one</span>
-            </h4>
             <li style={{ position: 'relative' }}>
               <button
                 type="button"
@@ -151,11 +151,11 @@ function Contacts() {
         </div>
         <div className={style.feedBack}>
           <form className={style.form} action="submit" onSubmit={handleSubmit}>
-            <button className={style.back} 
-            style={
-              choosenWay ? { opacity: 1 } : { opacity: 0 }
-            }
-            onClick={handleBack}>
+            <button
+              className={style.back}
+              style={choosenWay ? { opacity: 1 } : { opacity: 0 }}
+              onClick={handleBack}
+            >
               <IconArrowGoBackLine style={{ transform: 'scale(1.4)' }} />
             </button>
             <h5 className={style.formTitle}>Feedback is also possible</h5>

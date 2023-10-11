@@ -42,16 +42,6 @@ function Projects() {
         <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
           <h3 className={`${style.title} ${isVisible ? style.visible : ''}`}>
             Projects
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
-            <span className={style.block}></span>
           </h3>
         </VisibilitySensor>
       </div>
